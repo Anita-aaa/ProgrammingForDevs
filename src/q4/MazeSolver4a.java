@@ -1,11 +1,11 @@
-//4a
 package q4;
+
 import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.Set;
 
-class Solution {
+class MazeSolver4a {
     public int minMovesToCollectKeys(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
@@ -67,12 +67,12 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MazeSolver4a solution = new MazeSolver4a();
         char[][] grid = {
                 {'S', 'P', 'q', 'P', 'P'},
                 {'W', 'W', 'W', 'P', 'W'},
                 {'r', 'P', 'Q', 'P', 'R'}
         };
-        System.out.println(solution.minMovesToCollectKeys(grid)); // Output: 8
+        System.out.println(solution.minMovesToCollectKeys(grid));
     }
 }

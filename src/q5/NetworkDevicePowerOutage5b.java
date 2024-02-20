@@ -1,6 +1,8 @@
+package q5;
+
 import java.util.*;
 
-public class NetworkDevicePowerOutage {
+public class NetworkDevicePowerOutage5b {
 
     public static List<Integer> findImpactedDevices(int[][] edges, int targetDevice) {
         Map<Integer, List<Integer>> graph = buildGraph(edges);

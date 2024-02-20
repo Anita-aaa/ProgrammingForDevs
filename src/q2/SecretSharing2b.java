@@ -2,7 +2,6 @@ package q2;
 
 import java.util.*;
 
-//2a
 
 public class SecretSharing2b {
     public static List<Integer> findKnowsSecret(int n, int[][] intervals, int firstPerson) {
