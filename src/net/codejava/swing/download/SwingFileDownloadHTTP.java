@@ -1,6 +1,5 @@
 package net.codejava.swing.download;
 
-
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -194,4 +193,3 @@ public class SwingFileDownloadHTTP extends JFrame implements
         });
     }
 }
-

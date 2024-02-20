@@ -1,9 +1,8 @@
 package net.codejava.swing.download;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
+import java.io.InputStream;
 import javax.swing.JOptionPane;
 import javax.swing.SwingWorker;
 
@@ -42,9 +41,9 @@ public class DownloadTask extends SwingWorker<Void, Void> {
             FileOutputStream outputStream = new FileOutputStream(saveFilePath);
 
             byte[] buffer = new byte[BUFFER_SIZE];
-            int bytesRead = -1;
+            int bytesRead;
             long totalBytesRead = 0;
-            int percentCompleted = 0;
+            int percentCompleted;
             long fileSize = util.getContentLength();
 
             while ((bytesRead = inputStream.read(buffer)) != -1) {
@@ -58,7 +57,7 @@ public class DownloadTask extends SwingWorker<Void, Void> {
             outputStream.close();
 
             util.disconnect();
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             JOptionPane.showMessageDialog(gui, "Error downloading file: " + ex.getMessage(),
                     "Error", JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();

@@ -1,15 +1,15 @@
 package net.codejava.swing.download;
+
+import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URI;
 import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+//import java.nio.file.Path;
+
 
 public class HTTPDownloadUtil {
 
-    private HttpURLConnection httpConn;
+    private HttpsURLConnection httpConn;
 
     /**
      * hold input stream of HttpURLConnection
@@ -24,18 +24,19 @@ public class HTTPDownloadUtil {
      *
      * @param fileURL
      *            HTTP URL of the file to be downloaded
-     * @throws IOException
+     * @throws IOException when file you want to download is not downloadable or does not exist
      */
     public void downloadFile(String fileURL) throws IOException {
-        //URL url = new URL(fileURL);
-        //URI url = URI.create(fileURL).toURL();
-        Path path = Path.of( "/Users/your_user_name/example.txt" ) ;
-        URI uri = path.toUri () ;
-        httpConn = (HttpURLConnection) uri.toURL().openConnection();
+
+
+        // Path path = Path.of(fileURL) ;
+
+        java.net.URL wsURL = new URL(null, fileURL,new sun.net.www.protocol.https.Handler());
+        httpConn = (HttpsURLConnection) wsURL.openConnection();
         int responseCode = httpConn.getResponseCode();
 
         // always check HTTP response code first
-        if (responseCode == HttpURLConnection.HTTP_OK) {
+        if (responseCode == HttpsURLConnection.HTTP_OK) {
             String disposition = httpConn.getHeaderField("Content-Disposition");
             String contentType = httpConn.getContentType();
             contentLength = httpConn.getContentLength();
@@ -85,4 +86,9 @@ public class HTTPDownloadUtil {
     public InputStream getInputStream() {
         return this.inputStream;
     }
+//    public static void main(String [] args){
+//        new HTTPDownloadUtil().downloadFile(https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg);
+//
+//    }
 }
+
