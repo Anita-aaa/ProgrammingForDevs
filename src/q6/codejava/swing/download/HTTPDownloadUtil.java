@@ -1,4 +1,4 @@
-package net.codejava.swing.download;
+package q6.codejava.swing.download;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;

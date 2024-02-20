@@ -1,4 +1,4 @@
-package net.codejava;
+package q6.codejava;
 
 import java.io.File;
 import javax.swing.filechooser.FileFilter;

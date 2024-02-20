@@ -1,4 +1,4 @@
-package net.codejava;
+package q6.codejava;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

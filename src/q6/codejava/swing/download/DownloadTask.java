@@ -1,4 +1,4 @@
-package net.codejava.swing.download;
+package q6.codejava.swing.download;
 import java.io.File;
 import java.io.FileOutputStream;
 

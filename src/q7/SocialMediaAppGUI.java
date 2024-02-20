@@ -1,3 +1,5 @@
+package q7;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

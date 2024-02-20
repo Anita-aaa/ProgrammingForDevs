@@ -1,4 +1,4 @@
-package net.codejava.swing.download;
+package q6.codejava.swing.download;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-import net.codejava.JFilePicker;
+import q6.codejava.JFilePicker;
 
 /**
  * A Swing application that downloads file from an HTTP server.
